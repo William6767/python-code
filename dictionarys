@@ -1,0 +1,43 @@
+# cards = {
+#     "A":1,
+#     2:2,
+#     3:3,
+#     4:4,
+#     5:5,
+#     6:6,
+#     7:7,
+#     8:8,
+#     9:9,
+#     10:10,
+#     "J":10,
+#     "Q":10,
+#     "K":10
+# }
+#
+# user_choice = input("what card do you want").upper()
+# print(cards[user_choice])
+
+
+
+userinfo  = {
+
+}
+
+user_username = input("Enter your username: ")
+userinfo["username"] = user_username
+print(userinfo)
+
+user_password = input("Enter your password: ")
+userinfo["password"] = user_password
+print(userinfo)
+
+
+while True:
+    username = input("whats your username?")
+    if username == user_username:
+        password = input("whats your password?")
+        if password == user_password:
+            print("Welcome")
+            break
+        else:
+            print("Wrong password")
