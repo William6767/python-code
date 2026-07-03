@@ -1,0 +1,54 @@
+import random
+
+pokemon = [
+    {
+      "name": "Charizard",
+        "hp": 360,
+        "moves": [
+            {"name": "Fire spit", "damage": 160},
+            {"name": "Tail spin", "damage": 120},
+        ]
+
+    },
+    {
+        "name": "Snorlax",
+        "hp": 67000000000000000,
+        "moves": [
+            {"name": "BELLY BOUNCE", "damage": 250},
+            {"name": "weight Attack", "damage": 99999999999999999},
+
+        ]
+
+
+
+    }
+
+
+]
+
+
+player = pokemon[1].copy()
+enemy = pokemon[0].copy()
+
+print(player["name"])
+print(enemy["name"])
+
+
+choice = int(input("Choose an attack:")) - 1
+move = player["moves"][choice]
+damage = move["damage"]
+enemy["hp"] -= damage
+print(f"{player["name"]} did a {move} attack")
+
+
+choiceComp = random.choice(enemy["moves"])
+player["hp"] -= choiceComp["damage"]
+print(f"{enemy["name"]} did a {choiceComp} attack")
+
+if player["hp"] <= 0:
+    print("You lose!")
+else:
+    print("You win!")
+
+
+
