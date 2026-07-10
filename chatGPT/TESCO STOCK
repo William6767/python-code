@@ -1,0 +1,51 @@
+chats = {
+    "hi": "Hello!",
+    "how are you": "good how about you",
+    "good morning": "good morning, how may I help you today",
+    "good afternoon": "good afternoon, how may I help you today",
+    "good evening": "good evening, how may I help you today",
+     "67" : "67😎 A number so legendary it needs no explanation",
+}
+print("ChatGPT: Hello!")
+
+while True:
+    user = input("You: ").lower().strip()
+
+    if user in chats:
+        print("ChatGPT: ", chats[user])
+    if user == "bye":
+        break
+    else:
+        print("ChatGPT: Sorry, I didnt get that ")
+
+
+
+
+
+inventory = {
+    "Apples": 10,
+    "bread": 20,
+    "Milk": 3,
+    "Chocolate Bars": 10,
+
+}
+
+def viewInventory():
+    print("inventory:")
+    for item in sorted(inventory):
+        print(f"{item}: {inventory[item]} stock")
+
+
+viewInventory()
+
+
+def addProduct(product,stock):
+    if product not in inventory:
+        inventory[product] = stock
+    else:
+        inventory[product] += stock
+
+
+addProduct("Chocolate Bars", 5)
+addProduct("Milk", 10)
+viewInventory()
