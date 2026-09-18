@@ -1,0 +1,38 @@
+
+
+# import random
+
+# randomNumber = random.randint(1,100)
+
+# while True:
+#     guess = int(input("Guess a number between 1 and 100: "))
+#     if randomNumber == guess:
+#         print("YOU WIN")
+#     elif guess < randomNumber:
+#         print("HIGHER")
+#     elif guess > randomNumber:
+#         print("LOWER")
+
+
+import random
+
+choices = ["rock","paper","scissors"]
+
+computerChoice = random.choice(choices)
+
+userChoice = input("what do you want to pick rock paper or scissors").lower()
+
+if userChoice == "rock" and computerChoice == "scissors":
+    print("YOU WIN")
+elif userChoice == "rock" and computerChoice == "paper":
+    print("YOU LOSE")
+elif userChoice == "paper" and computerChoice == "scissors":
+    print("YOU LOSE")
+elif userChoice == "paper" and computerChoice == "rock":
+    print("YOU WIN")
+elif userChoice == "scissors" and computerChoice == "rock":
+    print("YOU LOSE")
+elif userChoice == "scissors" and computerChoice == "paper":
+    print("YOU WIN")
+elif userChoice == computerChoice:
+    print("DRAW")
